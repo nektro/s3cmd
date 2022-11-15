@@ -1,0 +1,7 @@
+id: n3is2de0cmg3foet8c8cawngm0d1d4e5c8ovwxm2ut7cxh8l
+name: s3cmd
+license: GPL-2.0
+description: Command line tool for managing Amazon S3 services
+root_dependencies:
+  - src: git https://github.com/ziglibs/known-folders
+  - src: git https://github.com/nektro/arqv-ini

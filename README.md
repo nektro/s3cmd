@@ -19,7 +19,7 @@ S3 is a paid service operated by Amazon. Before storing anything into S3 you mus
 
 - [ ] `s3cmd mb`
 - [ ] `s3cmd rb`
-- [ ] `s3cmd ls`
+- [x] `s3cmd ls`
 - [ ] `s3cmd la`
 - [ ] `s3cmd put`
 - [ ] `s3cmd get`

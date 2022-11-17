@@ -1,3 +1,10 @@
 2
+git https://github.com/MasterQ32/zig-uri commit-b7e688fc019e33f900fba0940eab74c81b480c13
 git https://github.com/nektro/arqv-ini commit-1a9b2e90379895e197893b6e19c93bd213ad36e6
+git https://github.com/nektro/iguanaTLS commit-5ad811124d46018df53bbff6e90a37097a8f170c
+git https://github.com/nektro/zfetch commit-2c5f8fa3ad2fabecec0e3d78fdda1906c0c20402
+git https://github.com/nektro/zig-extras commit-cab8f0eb4859d9c7249020e43af522a5fd43b41d
+git https://github.com/nektro/zig-range commit-4b2f12808aa09be4b27a163efc424dd4e0415992
+git https://github.com/nektro/zig-time commit-aff2df866eb16ad781e26a25f8b664d498e2211a
+git https://github.com/truemedian/hzzp commit-575d9560af41687102bb993d4e956dd131d963be
 git https://github.com/ziglibs/known-folders commit-24845b0103e611c108d6bc334231c464e699742c

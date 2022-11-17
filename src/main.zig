@@ -1,15 +1,28 @@
 const std = @import("std");
-const string = []const u8;
 const common = @import("./_common.zig");
+
+const commands = struct {
+    pub const ls = @import("./ls.zig");
+};
 
 pub fn main() !void {
     const alloc = std.heap.c_allocator;
 
     var argsiter = try std.process.argsWithAllocator(alloc);
     defer argsiter.deinit();
+    _ = argsiter.next().?;
 
     const config = try common.Config.read(alloc);
 
-    std.log.debug("{s}", .{config.access_key});
-    std.log.debug("{s}", .{config.secret_key});
+    const command = argsiter.next() orelse {
+        std.log.info("Usage: s3cmd [options] COMMAND [parameters]", .{});
+        return;
+    };
+    inline for (comptime std.meta.declarations(commands)) |decl| {
+        if (std.mem.eql(u8, command, decl.name)) {
+            return try @field(commands, decl.name).execute(alloc, &argsiter, &config);
+        }
+    }
+
+    std.log.err("invalid command: {s}", .{command});
 }
